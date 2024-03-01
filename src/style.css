@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(221, 221, 221);
+}
+.btn {
+  cursor: pointer;
+  margin: 20px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 20px;
+  background: none;
+  border-radius: 4px;
+  border: 2px solid rgb(230, 178, 58);
+  padding: 8px 25px;
+  transition: 0.5s;
+}
+.btn.search{
+    margin: 0 0 20px 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 300;
+}
+#input{
+    padding: 4px 8px;
+    background: none;
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+form{
+    margin-left: 20px;
+}
+.btn:hover {
+  background-color: rgb(230, 178, 58);
+}
+#root {
+  padding: 0 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.card {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+.card_textbox {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.card_image {
+}
+.card_name {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.card_email {
+  font-size: 18px;
+}
+.card_phone {
+  font-size: 18px;
+}
+
+@media (max-width: 1252px) {
+  .card {
+    overflow: unset;
+    padding: 14px;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  .card_textbox {
+    margin-top: 6px;
+    padding: 0;
+  }
+}
+@media (max-width: 1060px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 883px) {
+  #root {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 613px) {
+  #root {
+    grid-template-columns: 1fr;
+  }
+}
